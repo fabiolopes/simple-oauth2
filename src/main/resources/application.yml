@@ -1,0 +1,22 @@
+server:
+  port: 8443
+  ssl:
+    key-store: keystore.p12
+    key-store-password: 123456
+    key-store-type: PKCS12
+    key-alias: tomcat
+    
+    
+security:
+  oauth2:
+    client:
+      client-id: 2000207643574948
+      client-secret:  569809570b7c20859ad326f5cf27ebfa
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri:  https://graph.facebook.com/me
+  require-ssl: true
